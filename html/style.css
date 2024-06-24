@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
 @keyframes scroll {
-	0% { height: 0 }
-	100% { height: 100%; }
+    0% { height: 0 }
+    100% { height: 100%; }
 }
 
 @keyframes type { 
@@ -20,280 +20,445 @@
 }
 
 @keyframes scan {
-	from { top: 0 }
-	to { top: 100% }
+    from { top: 0 }
+    to { top: 100% }
 }
 
 @keyframes flicker {
-		0% { opacity: 0.15795 }
-		5% { opacity: 0.31511 }
-		10% { opacity: 0.94554 }
-		15% { opacity: 0.2469 }
-		20% { opacity: 0.62031 }
-		25% { opacity: 0.0293 }
-		30% { opacity: 0.00899 }
-		35% { opacity: 0.5344 }
-		40% { opacity: 0.12778 }
-		45% { opacity: 0.52042 }
-		50% { opacity: 0.3823 }
-		55% { opacity: 0.2198 }
-		60% { opacity: 0.9383 }
-		65% { opacity: 0.86615 }
-		70% { opacity: 0.68695 }
-		75% { opacity: 0.55749 }
-		80% { opacity: 0.96984 }
-		85% { opacity: 0.0361 }
-		90% { opacity: 0.24467 }
-		95% { opacity: 0.08351 }
-		100% { opacity: 0.54813 }
-	}
+        0% { opacity: 0.15795 }
+        5% { opacity: 0.31511 }
+        10% { opacity: 0.94554 }
+        15% { opacity: 0.2469 }
+        20% { opacity: 0.62031 }
+        25% { opacity: 0.0293 }
+        30% { opacity: 0.00899 }
+        35% { opacity: 0.5344 }
+        40% { opacity: 0.12778 }
+        45% { opacity: 0.52042 }
+        50% { opacity: 0.3823 }
+        55% { opacity: 0.2198 }
+        60% { opacity: 0.9383 }
+        65% { opacity: 0.86615 }
+        70% { opacity: 0.68695 }
+        75% { opacity: 0.55749 }
+        80% { opacity: 0.96984 }
+        85% { opacity: 0.0361 }
+        90% { opacity: 0.24467 }
+        95% { opacity: 0.08351 }
+        100% { opacity: 0.54813 }
+    }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
 * {
-	box-sizing: border-box;
-	}
-	
-html,
-body {
-	background: #383838;
-	color: #00dd00;
-	font-size: 64.5%;
-	font-size: 1.4em;
-	font-family: 'VT323', Courier;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 h4, h5, h6 { 
-	font-weight: normal;
-	margin: 0;
-	text-transform: uppercase;
+html,
+body {
+    background: #383838;
+    color: #00dd00;
+    font-size: 1em;
+    font-family: 'VT323', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
 }
 h4 b {
   color: white;
 }
 a {
-	color: white;	
-	text-decoration: none;	
+    color: white;    
+    text-decoration: none;    
 }
 
 a:hover {
-	color: red;
+    color: red;
 }
 
 p { 
-	line-height: 100%;
-	margin: 0; 
+    line-height: 1.2em;
+    margin: 0; 
 }
-	
+    
 span { animation: blink 1s infinite }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 ul a:before,
 p a:before {
-	color: #00dd00;
-	content: ' [ ';
+    color: #00dd00;
+    content: ' [ ';
 }
 
 ul a:after,
 p a:after {
-	color: #00dd00;
-	content: ' ] ';	
+    color: #00dd00;
+    content: ' ] ';    
 }
 
 header.site {
-	margin: 0 0 40px 0;
-	text-transform: uppercase;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
 }
 
 nav.site { 
-	margin: 0 0 40px 0;
-  position: relative;
-  width: 100%;
-  z-index: 10;
+    margin: 0 0 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
 
 nav.site ul {
-	padding: 0;
+    padding: 0;
 }
 
 nav.site ul li {
-	display: inline-block;
-  padding: 0 10px;
-  min-width: 250px;
-  width: auto;
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 250px;
+    width: auto;
 }
 
 .overlay {
-	height: 1px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
 }
 
 .overlay:before {
-	background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
-	background-size: 100% 3px, 6px 100%;
-	content: "";
-	display: block;
-	pointer-events: none;
-	position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	z-index: 2;
+    background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+    background-size: 100% 3px, 6px 100%;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
-	
+    
 .overlay:after {
-	animation: flicker 0.30s infinite;
-	background: rgba(16, 16, 16, 0.2);
-	content: "";
-	display: block;
-	pointer-events: none;
-	position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	z-index: 2;
+    animation: flicker 0.30s infinite;
+    background: rgba(16, 16, 16, 0.2);
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .col {
-	float: left;
-	padding: 0 20px;
+    float: left;
+    padding: 0 20px;
 }
 
 .col.two { width: auto; }
 
 .wrapper {
-  animation: scroll 5s 1;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
+    animation: scroll 5s 1;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
     scrollbar-width: none;
-  -ms-overflow-style: none;
+    -ms-overflow-style: none;
 }
 
 .content { 
-	animation: scroll 3s 1;
-  overflow: hidden;
-	padding: 40px; 
-	position: relative;
-	width: 95%;
+    animation: scroll 3s 1;
+    overflow: hidden;
+    padding: 20px; 
+    position: relative;
+    width: 95%;
 }
 
 #logo-v {
-	display: block;
-	height: auto;
-	margin: 0 auto;
-	width: 200px;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 150px;
 }
 
 img.pip-hero {
-	display: block;
-	float: left;
-	height: auto;
-	margin: 5px 10px 5px 0;
-	width: 120px;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 5px 10px 5px 0;
+    width: 120px;
 }
 
 form {}
 
 label {
-	clear: left;
-	display: block;
-	float: left;
-	margin-right: 10px;
-	padding-top: 5px;
+    clear: left;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    padding-top: 5px;
 }
 
 input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
 textarea {
-	background: transparent;
-	border: none;
-	color: #00dd00;
-	display: block;
-	float: left;
-	font-family: 'VT323', Courier;
-	font-size: 1.2em;
-	position: relative;
-	width: 80%;
-	z-index: 10
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00dd00;
+    color: #00dd00;
+    display: block;
+    float: left;
+    font-family: 'VT323', Courier;
+    font-size: 1em;
+    position: relative;
+    width: 80%;
+    z-index: 10;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 textarea {
-	margin-bottom: 20px
-	overflow: auto;
-	resize: none;
+    margin-bottom: 20px;
+    overflow: auto;
+    resize: none;
 }
 
 input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
 textarea:focus,
 input[type=submit]:focus,
 a.button:focus {
-	outline: 0;
+    outline: 0;
+    border-bottom: 2px solid #ffdd00;
+}
+
+input.error,
+textarea.error {
+    border-bottom: 2px solid red;
+}
+
+input.success,
+textarea.success {
+    border-bottom: 2px solid green;
 }
 
 input[type=submit],
 a.button {
-	background: transparent;
-	border: 1px solid #00dd00;
-	clear: both;
-	color: #00dd00;
-	cursor: hand;
-	display: inline-block;
-	font-family: 'VT323', Courier;
-	font-size: 1em;
-	margin-bottom: 20px;
-	opacity: 0.25;
-	padding: 10px 100px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	z-index: 10;
+    background: transparent;
+    border: 1px solid #00dd00;
+    clear: both;
+    color: #00dd00;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'VT323', Courier;
+    font-size: 1em;
+    margin-bottom: 20px;
+    opacity: 0.25;
+    padding: 10px 50px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10;
 }
 
 input[type=submit]:hover,
 a.button:hover {
-	background: #00dd00;
-	color: #383838;
-	opacity: 0.8;
+    background: #00dd00;
+    color: #383838;
+    opacity: 0.8;
 }
 
 .expandingArea { position: relative }
-	
+    
 .scanline {
-	animation: scroll 10s 5s infinite;
-	background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
-	background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
-	background: linear-gradient(to bottom,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000dd00', endColorstr='#0000dd00',GradientType=0 );
-	display: block;
-	height: 20px;
-	opacity: 0.05;
-	position: absolute;
-		left: 0;
-		right: 0;
-		top: -5%;
-	z-index: 2;
+    animation: scroll 10s 5s infinite;
+    background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
+    background: linear-gradient(to bottom,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000dd00', endColorstr='#0000dd00',GradientType=0 );
+    display: block;
+    height: 20px;
+    opacity: 0.05;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5%;
+    z-index: 1;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 
 .clearfix {
-  overflow: auto;
-  zoom: 1;
+    overflow: auto;
+    zoom: 1;
 }
 
 .upper { text-transform: uppercase; }
+
+/* Añadido para el Botón que Corre */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#runawayBtn {
+    position: relative;
+    display: inline-block;
+}
+
+#runawayBtn:hover {
+    background-color: #dc3545;
+}
+
+/* Estilos específicos para el CRUD */
+.div-titulo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-titulo h1 {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.contenedor {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ESTILOS FORMULARIO */
+.contenedor .div-formulario {
+    width: 45%;
+    height: auto;
+    margin: 15px;
+    background-color: rgb(135, 132, 132);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.contenedor .div-formulario h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+.contenedor .div-formulario form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button,
+.contenedor .div-formulario form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* ESTILOS LISTADO */
+.contenedor .div-listado {
+    width: 45%;
+    height: auto;
+    margin: 15px;
+    background-color: rgb(135, 132, 132);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+.contenedor .div-listado .div-usuarios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 0 30px;
+}
+
+.contenedor .div-listado .div-usuarios p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ddd;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    margin: 0 5px;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-editar {
+    background-color: green;
+}
+
+.btn-eliminar {
+    background-color: red;
+}
